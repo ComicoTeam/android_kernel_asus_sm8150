@@ -550,7 +550,7 @@ static int ipa_connect_channels(struct gsi_data_port *d_port)
 	struct ipa_req_chan_out_params ipa_out_channel_out_params;
 
 	log_event_dbg("IN: num_bufs:=%zu, buf_len=%zu\n",
-	d_port->in_request.num_bufs, d_port->in_request.buf_len);
+		d_port->in_request.num_bufs, d_port->in_request.buf_len);
 	ret = usb_gsi_ep_op(d_port->in_ep, &d_port->in_request,
 		GSI_EP_OP_PREPARE_TRBS);
 	if (ret) {
@@ -607,8 +607,8 @@ static int ipa_connect_channels(struct gsi_data_port *d_port)
 
 	if (d_port->out_ep) {
 		log_event_dbg("OUT: num_bufs:=%zu, buf_len=%zu\n",
-		d_port->out_request.num_bufs,
-		d_port->out_request.buf_len);
+			d_port->out_request.num_bufs,
+			d_port->out_request.buf_len);
 		ret = usb_gsi_ep_op(d_port->out_ep, &d_port->out_request,
 			GSI_EP_OP_PREPARE_TRBS);
 		if (ret) {

@@ -436,6 +436,7 @@ static int32_t cam_eeprom_parse_memory_map(
 	switch (cmm_hdr->cmd_type) {
 	case CAMERA_SENSOR_CMD_TYPE_I2C_RNDM_WR:
 		i2c_random_wr = (struct cam_cmd_i2c_random_wr *)cmd_buf;
+
 		cmd_length_in_bytes   = sizeof(struct cam_cmd_i2c_random_wr) +
 			((i2c_random_wr->header.count - 1) *
 			sizeof(struct i2c_random_wr_payload));

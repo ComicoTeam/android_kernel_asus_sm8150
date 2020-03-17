@@ -90,7 +90,7 @@ static int msm_drm_notifier_call_chain(unsigned long val, void *v)
  * atomically mark them as pending update
  */
 static int start_atomic(struct msm_drm_private *priv, uint32_t crtc_mask,
-		uint32_t plane_mask)
+			uint32_t plane_mask)
 {
 	int ret;
 
@@ -111,7 +111,7 @@ static int start_atomic(struct msm_drm_private *priv, uint32_t crtc_mask,
 /* clear specified crtcs (no longer pending update)
  */
 static void end_atomic(struct msm_drm_private *priv, uint32_t crtc_mask,
-		uint32_t plane_mask)
+			uint32_t plane_mask)
 {
 	spin_lock(&priv->pending_crtcs_event.lock);
 	DBG("end: %08x", crtc_mask);
